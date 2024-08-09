@@ -1,0 +1,10 @@
+button:focus {
+    outline: 2px solid rgba(0,0, 100, .6);
+    cursor: url('./../assets/images/favicon-32x32.png')  , pointer;
+}
+
+.field-radio:has(input[type=radio]:focus) {
+    outline: 2px solid rgba(0,0, 100, .6);
+
+}
+

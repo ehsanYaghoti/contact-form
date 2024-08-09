@@ -1,0 +1,30 @@
+.input.invalid {
+    border-color: hsl(0, 66%, 54%);
+}
+
+.input.invalid:focus {
+    border-color: hsl(169, 82%, 27%);
+}
+
+.input.invalid + .validation-message 
+, .text-area.invalid + .validation-message 
+, .input-checkbox.invalid ~ .validation-message 
+, .radio-section:has(.input-radio.invalid) + .validation-message {
+    visibility: visible;
+}
+
+.input.valid + .validation-message {
+    visibility: hidden;
+}
+
+.validation-message {
+    display: block;
+    font-size: .7rem;
+    color: hsl(0, 66%, 54%);
+    visibility: hidden;
+}
+
+.validation-message-email {
+    margin-top: 1rem;
+    visibility: hidden;
+}

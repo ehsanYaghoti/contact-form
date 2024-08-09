@@ -1,0 +1,19 @@
+/* custom radio button styles */
+
+.input-radio {
+    cursor: pointer;
+    transition: all;
+}
+
+.input-radio:checked {
+    cursor: pointer;
+    appearance: none;
+    display: flex;
+    width: 1px;
+    height: 1px;
+    background-color: hsl(169, 82%, 27%);
+    border: 2px solid hsl(148, 38%, 91%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px hsl(169, 82%, 27%);
+    transition: background-color 500ms ease-in;
+}

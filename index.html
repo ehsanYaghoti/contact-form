@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="./styles/font-face.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/main.css">
+
+  <!-- <link rel="stylesheet" href="./styles/validationHtml.css"> -->
+  <link rel="stylesheet" href="./styles/validationJS.css">
+  <link rel="stylesheet" href="./styles/accessAbility.css">
+  <link rel="stylesheet" href="./styles/radio.css">
+  <link rel="stylesheet" href="./styles/checkbox.css">
+  <link rel="stylesheet" href="./styles/toast.css">
+
+  <style>
+    .attribution { font-size: 11px; text-align: center;
+      justify-self: center;  
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+</head>
+<body>
+
+  <main class="main">
+    <section class="section">
+      <h2 class="section__title" >Contact Us</h2>
+      <form action="" class="section__form form" id="form"  novalidate >
+        <div class="col-2">
+          <div class="field">
+            <label for="firstName" class="label">First Name</label>
+            <input required autofocus pattern="[a-zA-Z0-9]{3,}" type="text"  name="firstName" id="firstName" class="input" placeholder="enter your first name here" aria-describedby="firstName-help">
+            <span id="firstName-help" class="validation-message" >This field is required and at least 3 character just alphanumeric</span>
+          </div>
+          <div class="field">
+            <label for="lastName" class="label">Last Name</label>
+            <input required  pattern="[a-zA-Z0-9]{3,}" type="text" name="lastName" id="lastName" class="input" placeholder="enter your last name here" aria-describedby="lastName-help">
+            <span id="lastName-help" class="validation-message" >This field is required and at least 3 character just alphanumeric</span>
+          </div>
+        </div>
+        <div class="col-1">
+          <div class="field">
+            <label for="email" class="label">Email Address</label>
+            <input required pattern="[a-zA-Z0-9\.]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]{1,9}" type="email" name="email" id="email" class="input" placeholder="enter your email here" aria-describedby="email-help">
+            <span class="validation-message" id="email-help" >Please enter a valid email address</span>
+          </div>
+        </div>
+        <div class="col-1">
+          <fieldset class="fieldset">
+            <legend class="label">Query Type</legend>
+            <div class="col-2 radio-section">
+              <div class="field field-radio">
+                <input required type="radio" name="queryType" value="GeneralEnquiry" id="queryType1" class="input input-radio" aria-describedby="queryType-help">
+                <label for="queryType1" class="label label-radio">General Enquiry</label>
+
+              </div>
+              <div class="field field-radio">
+                <input required type="radio" name="queryType" value="Support Request" id="queryType2" class="input input-radio" aria-describedby="queryType-help">
+                <label for="queryType2" class="label label-radio">Support Request</label>
+
+              </div>
+            </div>
+            <span id="queryType-help" class="validation-message">Please select a query type</span>
+          </fieldset>
+        </div>
+        <div class="col-1">
+          <div class="field">
+            <label for="message" class="label">Message</label>
+            <textarea required minlength="3" maxlength="72"  pattern="[a-zA-Z0-9]{3,72}" name="message" id="message" class="input"  cols="30" rows="5" placeholder="enter your message here..." aria-describedby="message-help" ></textarea>
+            <span class="validation-message" id="message-help">This field is required minimum 3 and maximum 72 character</span>
+          </div>
+        </div>
+        <div class="col-1">
+          <div class="field">
+            <div class="field-checkbox">
+              <input required type="checkbox" name="contacted" id="contacted" class="input input-checkbox" aria-describedby="contacted-help">
+              <label for="contacted" class="label label-checkbox">
+                <span></span>
+                <label for="contacted">I consent to being contacted by the team</label>
+              </label>
+              <span class="validation-message validation-message-email" id="contacted-help">To submit this form, please consent to being contacted</span>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-1">
+          <button type="submit" class="btn btn-submit" id="submit" >Submit</button>
+        </div>
+      </form>
+    </section>
+    
+    
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/ehsanyaghoti">Ehsan yaghoti</a>.
+  </div>
+
+  <script src="./script/validation.js"></script>
+  <script src="./script/toast.js"></script>
+</body>
+</html>
